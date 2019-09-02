@@ -34,6 +34,14 @@ public class User {
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Address> addresses;
 	
+	public List<Address> getAddresses() {
+		return addresses;
+	}
+
+	public void setAddresses(List<Address> addresses) {
+		this.addresses = addresses;
+	}
+
 	public long getId() {
 		return id;
 	}

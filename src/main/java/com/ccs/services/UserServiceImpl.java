@@ -24,6 +24,11 @@ public class UserServiceImpl implements UserService {
 		return this.userRepository.findAll();
 	}
 
+	public User save(User user) {
+		return this.userRepository.save(user);
+	}
+
+
 	
 	
 }
