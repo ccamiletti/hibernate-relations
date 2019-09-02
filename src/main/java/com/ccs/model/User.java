@@ -27,11 +27,12 @@ public class User {
 	private String lastName;
 	
 	/**
-	 * Unidirectional @OneToMany
-	 * It is going to create a new table between user and address
+	 * Unidirectional using @JoinColumn
+	 * It is NOT going to create a new table between user and address, 
 	 */
 	
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumn(name = "user_id")
 	private List<Address> addresses;
 	
 	public List<Address> getAddresses() {
