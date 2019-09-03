@@ -3,6 +3,7 @@ package com.ccs.controllers;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,6 +26,14 @@ public class UserController {
 	@GetMapping("/getUsers")
 	public List<User> findAll() {
 		return this.userService.findAll();
+		
+	}
+
+	@GetMapping("/getUserByid/{id}")
+	public User findById(@PathVariable("id") long id) {
+		User u = this.userService.findById(id).get();
+		System.out.println(u);
+		return u;
 		
 	}
 

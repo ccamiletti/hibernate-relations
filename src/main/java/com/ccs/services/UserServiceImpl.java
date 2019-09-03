@@ -1,6 +1,7 @@
 package com.ccs.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -26,6 +27,12 @@ public class UserServiceImpl implements UserService {
 
 	public User save(User user) {
 		return this.userRepository.save(user);
+	}
+
+	@Override
+	public Optional<User> findById(long id) {
+		// TODO Auto-generated method stub
+		return this.userRepository.findById(id);
 	}
 
 
