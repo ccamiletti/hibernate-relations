@@ -4,21 +4,7 @@ pipeline {
 
 	stages {
 
-		stage('Example Deploy') {
-            when {
-                branch 'master'
-            }
-            steps {
-                echo 'Deploying master'
-            }
-        }
-	
 		stage('****clean*****') {
-		
-            when {
-                branch 'master'
-                environment name: 'DEPLOY_TO', value: 'production'
-            }
 		
 			steps{
 				sh "mvn clean"
