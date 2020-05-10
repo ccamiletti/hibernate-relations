@@ -9,5 +9,7 @@ public class HibernateRelationsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HibernateRelationsApplication.class, args);
 	}
+	
+	
 
 }
